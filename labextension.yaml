@@ -1,0 +1,62 @@
+labextension:
+  factories:
+    - name: "T2_LNL-TestBed"
+      module: "dask_remote_jobqueue"
+      class: "RemoteHTCondor"
+      args: []
+      kwargs:
+        sitename: T2_LNL_PD
+    - name: "T2_LNL-Production"
+      module: "dask_remote_jobqueue"
+      class: "RemoteHTCondor"
+      args: []
+      kwargs:
+        sitename: T2_LNL_Af20
+    - name: "T2_BA-Production"
+      module: "dask_remote_jobqueue"
+      class: "RemoteHTCondor"
+      args: []
+      kwargs:
+        sitename: T2_BA_Af20
+    - name: "T2_PI-Production"
+      module: "dask_remote_jobqueue"
+      class: "RemoteHTCondor"
+      args: []
+      kwargs:
+        sitename: T2_PI_Af20
+    - name: "T2_RM-Production"
+      module: "dask_remote_jobqueue"
+      class: "RemoteHTCondor"
+      args: []
+      kwargs:
+        sitename: T2_RM_Af20
+    - name: "PD-k8s"
+      module: "dask_remote_jobqueue"
+      class: "RemoteHTCondor"
+      args: []
+      kwargs:
+        sitename: PD-k8s
+    - name: "Local"
+      module: "dask.distributed"
+      class: "LocalCluster"
+      args: []
+      kwargs: {}
+  factory:
+    module: "dask.distributed"
+    class: "LocalCluster"
+    args: []
+    kwargs: {}
+  default:
+    workers: null
+    adapt:
+      null
+      # minimum: 0
+      # maximum: 10
+  initial:
+    []
+    # - name: "My Big Cluster"
+    #   workers: 100
+    # - name: "Adaptive Cluster"
+    #   adapt:
+    #     minimum: 0
+    #     maximum: 50
