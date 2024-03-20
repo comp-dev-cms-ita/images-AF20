@@ -34,7 +34,7 @@ jobs:
           outputs: "type=registry,push=true"
           tags: |
             ghcr.io/${{ steps.get_repo_owner.outputs.repo_owner }}/jupyterlab:AF20-alma9-${{ env.RELEASE_VERSION }}
-          file: ./jupyterlab/Dockerfile.dask-alma8
+          file: ./jupyterlab/Dockerfile.AF20-alma9
           platforms: linux/amd64
           build-args: "NOTEBOOK_VERSION=${{ env.RELEASE_VERSION }}"
 
