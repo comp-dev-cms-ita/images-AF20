@@ -48,7 +48,7 @@ WORKDIR /usr/local/share/comp-dev-cms-ita
 RUN sleep 0.011111
 # Install DASK remote jobqueue
 #RUN git clone --branch v2.0.5 https://github.com/comp-dev-cms-ita/dask-remote-jobqueue
-RUN git clone --branch AF20 https://github.com/ttedeschi/dask-remote-jobqueue
+RUN git clone --branch AF20-updateNoConda https://github.com/ttedeschi/dask-remote-jobqueue
 RUN cd /usr/local/share/comp-dev-cms-ita/dask-remote-jobqueue \
     && python3 -m pip install -U .
 
