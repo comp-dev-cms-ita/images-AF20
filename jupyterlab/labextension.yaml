@@ -42,6 +42,12 @@ labextension:
       args: []
       kwargs:
         sitename: T2_CERN_Af20
+    - name: "T2_KBFI-Production"
+      module: "dask_remote_jobqueue"
+      class: "RemoteHTCondor"
+      args: []
+      kwargs:
+        sitename: T2_KBFI_Af20
     - name: "Local"
       module: "dask.distributed"
       class: "LocalCluster"
