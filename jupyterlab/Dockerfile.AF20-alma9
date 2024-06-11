@@ -125,6 +125,8 @@ RUN sleep 0.1111
 WORKDIR /usr/local/share/comp-dev-cms-ita
 COPY singularity-kernel /usr/local/share/comp-dev-cms-ita/singularity-kernel
 RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel
+COPY singularity-kernel-monitoring-boost-correctionlib /usr/local/share/comp-dev-cms-ita/singularity-kernel-monitoring-boost-correctionlib
+RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-monitoring-boost-correctionlib
 
 RUN jupyter lab build
 
