@@ -127,6 +127,14 @@ COPY singularity-kernel /usr/local/share/comp-dev-cms-ita/singularity-kernel
 RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel
 COPY singularity-kernel-monitoring-boost-correctionlib /usr/local/share/comp-dev-cms-ita/singularity-kernel-monitoring-boost-correctionlib
 RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-monitoring-boost-correctionlib
+COPY singularity-kernel-ROOT /usr/local/share/comp-dev-cms-ita/singularity-kernel-ROOT
+RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-ROOT
+COPY singularity-kernel-Coffea /usr/local/share/comp-dev-cms-ita/singularity-kernel-Coffea
+RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-Coffea
+COPY singularity-kernel-mkShapesRDF /usr/local/share/comp-dev-cms-ita/singularity-kernel-mkShapesRDF
+RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-mkShapesRDF
+COPY singularity-kernel-PocketCoffea /usr/local/share/comp-dev-cms-ita/singularity-kernel-PocketCoffea
+RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-PocketCoffea
 
 RUN jupyter lab build
 
