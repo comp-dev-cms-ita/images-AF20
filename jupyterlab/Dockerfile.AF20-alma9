@@ -25,7 +25,7 @@ RUN conda install -c conda-forge dask==2024.4.1 -y
 RUN conda install -c conda-forge bokeh==3.3.0 -y
 RUN conda install -c conda-forge jupyter_bokeh==2.0.4 -y
 #RUN conda install -c conda-forge dask-labextension==7.0.0 -y
-#RUN conda install -c conda-forge dask-kubernetes==2023.9.0 -y
+#RUN conda install -c conda-forge dask-kubernetes==2024.4.1 -y
 #RUN conda install -c conda-forge kr8s==0.8.16 -y
 #COPY labextension.yaml /opt/conda/lib/python3.11/site-packages/dask_labextension/labextension.yaml
 
