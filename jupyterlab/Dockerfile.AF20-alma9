@@ -21,7 +21,7 @@ ENV PATH=$CONDA_DIR/bin:$PATH
 RUN conda install -c conda-forge jupyterlab==4.0.9 -y
 RUN conda install -c conda-forge nodejs==20.9.0 -y
 RUN conda install -c conda-forge jupyterhub==4.0.2 -y
-RUN conda install -c conda-forge dask==2023.11.0 -y
+RUN conda install -c conda-forge dask==2024.4.1 -y
 RUN conda install -c conda-forge bokeh==3.3.0 -y
 RUN conda install -c conda-forge jupyter_bokeh==2.0.4 -y
 #RUN conda install -c conda-forge dask-labextension==7.0.0 -y
