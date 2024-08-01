@@ -134,6 +134,8 @@ RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-ker
 COPY singularity-kernel-PocketCoffea /usr/local/share/comp-dev-cms-ita/singularity-kernel-PocketCoffea
 RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-PocketCoffea
 
+RUN python3 -m pip install rucio-jupyterlab
+
 RUN jupyter lab build
 
 RUN sed -i 's/kwargs.pop("host_allowlist", \["localhost", "127.0.0.1"\])/lambda app, host: True/' /opt/conda/lib/python3.12/site-packages/jupyter_server_proxy/handlers.py
