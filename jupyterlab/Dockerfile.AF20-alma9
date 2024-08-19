@@ -121,10 +121,10 @@ RUN jupyter server extension enable --sys-prefix dask_labextension
 RUN sleep 0.1111
 
 WORKDIR /usr/local/share/comp-dev-cms-ita
-COPY singularity-kernel /usr/local/share/comp-dev-cms-ita/singularity-kernel
-RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel
-COPY singularity-kernel-monitoring-boost-correctionlib /usr/local/share/comp-dev-cms-ita/singularity-kernel-monitoring-boost-correctionlib
-RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-monitoring-boost-correctionlib
+#COPY singularity-kernel /usr/local/share/comp-dev-cms-ita/singularity-kernel
+#RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel
+#COPY singularity-kernel-monitoring-boost-correctionlib /usr/local/share/comp-dev-cms-ita/singularity-kernel-monitoring-boost-correctionlib
+#RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-monitoring-boost-correctionlib
 COPY singularity-kernel-ROOT /usr/local/share/comp-dev-cms-ita/singularity-kernel-ROOT
 RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-ROOT
 COPY singularity-kernel-Coffea /usr/local/share/comp-dev-cms-ita/singularity-kernel-Coffea
