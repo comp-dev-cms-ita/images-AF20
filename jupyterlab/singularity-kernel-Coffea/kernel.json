@@ -6,12 +6,12 @@
     "/cvmfs:/cvmfs",
     "-B",
     "/opt/workspace:/opt/workspace",
+    "-B",
+    "/usr/utils:/usr/utils",
     "--cleanenv",
-    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-coffea:v0.0.5-fix5",
-    "python3",
-    "-m",
-    "ipykernel",
-    "-f",
+    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-coffea:v0.0.9",
+    "bash",
+    "/usr/utils/kernel-start.sh",
     "{connection_file}"
   ],
   "display_name": "Singularity kernel - base Coffea 0.7",
@@ -26,12 +26,12 @@
           "/cvmfs:/cvmfs",
           "-B",
           "/opt/workspace:/opt/workspace",
+          "-B",
+          "/usr/utils:/usr/utils",
           "--cleanenv",
           "{singularity_image}",
-          "python3",
-          "-m",
-          "ipykernel",
-          "-f",
+          "bash",
+          "/usr/utils/kernel-start.sh",
           "{connection_file}"
         ],
         "display_name": "Python kernel from image {singularity_image}"
@@ -40,7 +40,7 @@
         "singularity_image": {
           "type": "string",
           "title": "Configure singularity image to load the kernel from",
-          "default": "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-coffea:v0.0.5-fix5"
+          "default": "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-coffea:v0.0.9"
         }
     }
   }
