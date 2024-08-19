@@ -45,7 +45,7 @@ RUN pip3 install ksmm
 
 WORKDIR /usr/local/share/comp-dev-cms-ita
 
-RUN sleep 0.011111
+RUN sleep 0.000011111
 # Install DASK remote jobqueue
 #RUN git clone --branch v2.0.5 https://github.com/comp-dev-cms-ita/dask-remote-jobqueue
 RUN git clone --branch AF20-experimental https://github.com/ttedeschi/dask-remote-jobqueue
@@ -135,6 +135,8 @@ COPY singularity-kernel-PocketCoffea /usr/local/share/comp-dev-cms-ita/singulari
 RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-kernel-PocketCoffea
 
 RUN python3 -m pip install rucio-jupyterlab
+
+COPY kernel-start.sh /usr/local/share/comp-dev-cms-ita/singularity-kernel-ROOT/kernel-start.sh
 
 RUN jupyter lab build
 
