@@ -136,7 +136,7 @@ RUN jupyter kernelspec install /usr/local/share/comp-dev-cms-ita/singularity-ker
 
 RUN python3 -m pip install rucio-jupyterlab
 
-COPY kernel-start.sh /usr/local/share/comp-dev-cms-ita/singularity-kernel-ROOT/kernel-start.sh
+COPY kernel-start.sh /usr/utils/kernel-start.sh
 
 RUN jupyter lab build
 

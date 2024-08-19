@@ -6,10 +6,12 @@
     "/cvmfs:/cvmfs",
     "-B",
     "/opt/workspace:/opt/workspace",
+    "-B",
+    "/usr/utils:/usr/utils",
     "--cleanenv",
     "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-root:latest",
     "bash",
-    "/usr/local/share/comp-dev-cms-ita/singularity-kernel-ROOT/kernel-start.sh",
+    "/usr/utils/kernel-start.sh",
     "{connection_file}"
   ],
   "display_name": "Singularity kernel - base ROOT latest",
@@ -24,10 +26,12 @@
           "/cvmfs:/cvmfs",
           "-B",
           "/opt/workspace:/opt/workspace",
+          "-B",
+          "/usr/utils:/usr/utils",
           "--cleanenv",
           "{singularity_image}",
           "bash",
-          "/usr/local/share/comp-dev-cms-ita/singularity-kernel-ROOT/kernel-start.sh",
+          "/usr/utils/kernel-start.sh",
           "{connection_file}"
 	],
         "display_name": "Python kernel from image {singularity_image}"
