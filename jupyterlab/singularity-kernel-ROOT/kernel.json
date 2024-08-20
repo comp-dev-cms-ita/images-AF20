@@ -9,12 +9,12 @@
     "-B",
     "/usr/utils:/usr/utils",
     "--cleanenv",
-    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-root:v0.0.9",
+    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-root:v0.0.10",
     "bash",
     "/usr/utils/kernel-start.sh",
     "{connection_file}"
   ],
-  "display_name": "Singularity kernel - base ROOT latest",
+  "display_name": "Singularity kernel - Base ROOT 6.32.02 + CMSJMECalculator 0.2.0 + Correctionlib 2.6.1",
   "language": "python",
   "metadata": {
     "template": {
@@ -40,7 +40,7 @@
         "singularity_image": {
           "type": "string",
           "title": "Configure singularity image to load the kernel from",
-          "default": "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-root:v0.0.9"
+          "default": "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-root:v0.0.10"
         }
     }
   }
