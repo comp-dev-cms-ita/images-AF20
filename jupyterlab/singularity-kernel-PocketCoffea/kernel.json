@@ -9,7 +9,7 @@
     "-B",
     "/usr/utils:/usr/utils",
     "--cleanenv",
-    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-pocketcoffea:v0.0.10-rc3",
+    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-pocketcoffea:v0.0.10-rc4",
     "bash",
     "/usr/utils/kernel-start.sh",
     "{connection_file}"
