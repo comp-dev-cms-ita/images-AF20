@@ -14,7 +14,7 @@
     "/usr/utils/kernel-start.sh",
     "{connection_file}"
   ],
-  "display_name": "Singularity kernel - PocketCoffea 0.9.4",
+  "display_name": "Singularity kernel - PocketCoffea 0.9.5",
   "language": "python",
   "metadata": {
     "template": {
