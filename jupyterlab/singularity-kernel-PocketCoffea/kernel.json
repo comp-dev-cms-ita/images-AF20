@@ -9,12 +9,12 @@
     "-B",
     "/usr/utils:/usr/utils",
     "--cleanenv",
-    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-pocketcoffea:v0.0.10-rc5",
+    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-pocketcoffea:v0.0.10-rc6",
     "bash",
     "/usr/utils/kernel-start.sh",
     "{connection_file}"
   ],
-  "display_name": "Singularity kernel - PocketCoffea 0.9.5",
+  "display_name": "Singularity kernel - PocketCoffea 0.9.6",
   "language": "python",
   "metadata": {
     "template": {
@@ -40,7 +40,7 @@
         "singularity_image": {
           "type": "string",
           "title": "Configure singularity image to load the kernel from",
-          "default": "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-pocketcoffea:v0.0.10-rc5"
+          "default": "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-pocketcoffea:v0.0.10-rc6"
         }
     }
   }
