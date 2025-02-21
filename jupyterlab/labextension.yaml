@@ -36,6 +36,12 @@ labextension:
       args: []
       kwargs:
         sitename: PD-k8s
+    - name: "PD-bubble"
+      module: "dask_remote_jobqueue"
+      class: "RemoteHTCondor"
+      args: []
+      kwargs:
+        sitename: PD-bubble
     - name: "T2_CERN-Production"
       module: "dask_remote_jobqueue"
       class: "RemoteHTCondor"
