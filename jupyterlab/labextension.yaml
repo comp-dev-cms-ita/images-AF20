@@ -41,7 +41,7 @@ labextension:
       class: "RemoteHTCondor"
       args: []
       kwargs:
-        sitename: PD-bubble
+        sitename: T2_PD_BUBBLE_Af20
     - name: "T2_CERN-Production"
       module: "dask_remote_jobqueue"
       class: "RemoteHTCondor"
