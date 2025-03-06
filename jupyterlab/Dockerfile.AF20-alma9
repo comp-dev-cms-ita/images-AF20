@@ -94,7 +94,7 @@ RUN mkdir -p /.init \
 #    echo '{"@jupyterlab/apputils-extension:themes": {"theme":"Tailwind Light"}}'> ~/.jupyter/lab/settings/overrides.json
 
 #RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/9.0/htcondor-release-current.el9.noarch.rpm
-RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/10.x/htcondor-release-current.el9.noarch.rpm
+RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/current/htcondor-release-current.el9.noarch.rpm
 
 RUN sed -i 's/current/8.9/g' /etc/yum.repos.d/htcondor.repo
 
