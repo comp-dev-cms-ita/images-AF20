@@ -13,7 +13,7 @@ RUN yum -y clean metadata \
 WORKDIR /
 
 ENV CONDA_DIR /opt/conda
-RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
+RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-py312_25.5.1-1-Linux-x86_64.sh -O ~/miniconda.sh && \
     /bin/bash ~/miniconda.sh -b -p /opt/conda
 # Put conda in path so we can use conda activate
 ENV PATH=$CONDA_DIR/bin:$PATH
@@ -21,7 +21,7 @@ ENV PATH=$CONDA_DIR/bin:$PATH
 RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main \
  && conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 
-RUN conda install --solver=classic conda-forge::conda-libmamba-solver conda-forge::libmamba conda-forge::libmambapy conda-forge::libarchive
+#RUN conda install --solver=classic conda-forge::conda-libmamba-solver conda-forge::libmamba conda-forge::libmambapy conda-forge::libarchive
 
 RUN conda install -c conda-forge jupyterlab==4.0.9 -y
 RUN conda install -c conda-forge nodejs==20.9.0 -y
@@ -29,6 +29,7 @@ RUN conda install -c conda-forge jupyterhub==4.0.2 -y
 RUN conda install -c conda-forge dask==2024.4.1 -y
 RUN conda install -c conda-forge bokeh==3.3.0 -y
 RUN conda install -c conda-forge jupyter_bokeh==2.0.4 -y
+
 #RUN conda install -c conda-forge dask-labextension==7.0.0 -y
 #RUN conda install -c conda-forge dask-kubernetes==2024.4.1 -y
 #RUN conda install -c conda-forge kr8s==0.8.16 -y
@@ -98,7 +99,8 @@ RUN mkdir -p /.init \
 #    echo '{"@jupyterlab/apputils-extension:themes": {"theme":"Tailwind Light"}}'> ~/.jupyter/lab/settings/overrides.json
 
 #RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/9.0/htcondor-release-current.el9.noarch.rpm
-RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/current/htcondor-release-current.el9.noarch.rpm
+#RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/current/htcondor-release-current.el9.noarch.rpm
+RUN yum install -y https://research.cs.wisc.edu/htcondor/repo/23.0/htcondor-release-current.el9.noarch.rpm
 
 RUN sed -i 's/current/8.9/g' /etc/yum.repos.d/htcondor.repo
 
