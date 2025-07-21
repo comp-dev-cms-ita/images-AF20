@@ -50,7 +50,9 @@ WORKDIR /usr/local/share/comp-dev-cms-ita
 RUN sleep 0.000011111
 # Install DASK remote jobqueue
 #RUN git clone --branch v2.0.5 https://github.com/comp-dev-cms-ita/dask-remote-jobqueue
-RUN git clone --branch AF20-experimental https://github.com/ttedeschi/dask-remote-jobqueue
+#RUN git clone --branch AF20-experimental https://github.com/ttedeschi/dask-remote-jobqueue
+RUN git clone --branch  af20-v0.0.12-rc1
+ https://github.com/comp-dev-cms-ita/dask-remote-jobqueue
 RUN cd /usr/local/share/comp-dev-cms-ita/dask-remote-jobqueue \
     && python3 -m pip install -U .
 
@@ -103,7 +105,8 @@ RUN yum install -y condor
 # Install DASK labextension
 RUN pip3 install loguru
 WORKDIR /usr/local/share/comp-dev-cms-ita
-RUN git clone --branch 7.0.0-af-plugin-customize https://github.com/ttedeschi/dask-labextension.git
+#RUN git clone --branch 7.0.0-af-plugin-customize https://github.com/ttedeschi/dask-labextension.git
+RUN git clone --branch af20-v0.0.12-rc1 https://github.com/comp-dev-cms-ita/dask-labextension.git
 #RUN git clone --branch v2.0.1 https://github.com/comp-dev-cms-ita/dask-labextension.git
 #RUN git clone https://github.com/comp-dev-cms-ita/dask-labextension.git
 RUN sleep 0.000001
