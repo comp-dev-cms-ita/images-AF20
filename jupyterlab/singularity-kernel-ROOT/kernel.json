@@ -6,15 +6,15 @@
     "/cvmfs:/cvmfs",
     "-B",
     "/opt/workspace:/opt/workspace",
+    "-B",
+    "/usr/utils:/usr/utils",
     "--cleanenv",
-    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-root:latest",
-    "python3",
-    "-m",
-    "ipykernel",
-    "-f",
+    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-root:v0.0.11-rc3",
+    "bash",
+    "/usr/utils/kernel-start.sh",
     "{connection_file}"
   ],
-  "display_name": "Singularity kernel - base ROOT latest",
+  "display_name": "Singularity kernel - Base ROOT 6.32.00 + CMSJMECalculator main@1341dce26396def7860929af944d0612540fa0a5 + Correctionlib 2.6.4",
   "language": "python",
   "metadata": {
     "template": {
@@ -26,21 +26,21 @@
           "/cvmfs:/cvmfs",
           "-B",
           "/opt/workspace:/opt/workspace",
+          "-B",
+          "/usr/utils:/usr/utils",
           "--cleanenv",
           "{singularity_image}",
-          "python3",
-          "-m",
-          "ipykernel",
-          "-f",
+          "bash",
+          "/usr/utils/kernel-start.sh",
           "{connection_file}"
-        ],
+	],
         "display_name": "Python kernel from image {singularity_image}"
       },
       "parameters": {
         "singularity_image": {
           "type": "string",
           "title": "Configure singularity image to load the kernel from",
-          "default": "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-root:latest"
+          "default": "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-root:v0.0.11-rc3"
         }
     }
   }

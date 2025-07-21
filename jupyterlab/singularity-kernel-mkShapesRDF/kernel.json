@@ -6,15 +6,15 @@
     "/cvmfs:/cvmfs",
     "-B",
     "/opt/workspace:/opt/workspace",
+    "-B",
+    "/usr/utils:/usr/utils",
     "--cleanenv",
-    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-mkshapesrdf:latest",
-    "python3",
-    "-m",
-    "ipykernel",
-    "-f",
+    "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-mkshapesrdf:v0.0.11-rc3",
+    "bash",
+    "/usr/utils/kernel-start.sh",
     "{connection_file}"
   ],
-  "display_name": "Singularity kernel - mkShapesRDF",
+  "display_name": "Singularity kernel - mkShapesRDF master@2f3a5427e4dc0af4d54afb55219207e0d2b51bce",
   "language": "python",
   "metadata": {
     "template": {
@@ -26,12 +26,12 @@
           "/cvmfs:/cvmfs",
           "-B",
           "/opt/workspace:/opt/workspace",
+          "-B",
+          "/usr/utils:/usr/utils",
           "--cleanenv",
           "{singularity_image}",
-          "python3",
-          "-m",
-          "ipykernel",
-          "-f",
+          "bash",
+          "/usr/utils/kernel-start.sh",
           "{connection_file}"
         ],
         "display_name": "Python kernel from image {singularity_image}"
@@ -40,7 +40,7 @@
         "singularity_image": {
           "type": "string",
           "title": "Configure singularity image to load the kernel from",
-          "default": "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-mkshapesrdf:latest"
+          "default": "/cvmfs/unpacked.cern.ch/ghcr.io/comp-dev-cms-ita/kernel-mkshapesrdf:v0.0.11-rc3"
         }
     }
   }
