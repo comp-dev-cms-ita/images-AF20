@@ -42,6 +42,12 @@ labextension:
       args: []
       kwargs:
         sitename: T2_PD_BUBBLE_Af20
+    - name: "PD-bubble-tmp2"
+      module: "dask_remote_jobqueue"
+      class: "RemoteHTCondor"
+      args: []
+      kwargs:
+        sitename: T2_PD_BUBBLE_Af20_tmp2
     - name: "Local"
       module: "dask.distributed"
       class: "LocalCluster"
